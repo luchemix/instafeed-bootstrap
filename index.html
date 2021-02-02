@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+
+    <!-- pip3 install flask && python3 server.py -->
+    <title>InstaFeed</title>
+  </head>
+  <body class="bg-dark">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<!-- Inicio del codigo -->
+<div class="container-fluid">
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-pill border border-secondary">
+            <div class="container-fluid">
+                    <a class="navbar-brand fs-2" href="by3.jpg" id="header"><i class="fab fa-instagram" id="Iicon"></i>InstaFeed</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                <form class="d-flex">
+                    <!-- Crear Post -->
+                    <button type="button" class="btn btn-success pr-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Crear Post</button> 
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title bg-dark text-white" id="exampleModalLabel">Nueva Publicación</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                <div class="modal-body text-white">
+                                    <div>
+                                        <label for="message-text" class="col-form-label">¿Qué estás pensando?</label>
+                                        <textarea class="form-control bg-secondary" id="message-text"></textarea>
+                                    </div>
+                                    <div>
+                                        <div class="btn-group pt-2" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-secondary"><i class="fas fa-camera"></i></button>
+                                            <button type="button" class="btn btn-secondary"><i class="fas fa-video"></i></button>
+                                            <button type="button" class="btn btn-secondary"><i class="fas fa-map-marker-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-dark"></button>
+                    </div>           
+                    <!-- Herramientas -->
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-cog"></i></button>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenu2">
+                                <li><button class="dropdown-item text-secondary" type="button" href="/workspace/html-hello/by1.png">Perfil</button></li>
+                                <li><button class="dropdown-item text-secondary" type="button">¡Ayuda!</button></li>
+                                <li><button class="dropdown-item text-secondary" type="button">Cerrar Sesión</button></li>
+                            </ul>
+                        <button type="button" class="btn btn-dark"></button>
+                        <button type="button" class="btn btn-dark"></button>
+                    </div>
+
+
+                </form>
+                <!-- </div> Needed? -->
+            </div>
+        </nav>
+</div>
+
+<!-- IMAGES -->
+    <DIV class="contatiner-fluid">
+        <div class="row align-items-center">
+            <div class="col-4 bg-dark">
+                <img src="https://media.timeout.com/images/105476859/1372/772/image.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-4 bg-dark">
+                 <img src="https://media.timeout.com/images/105476874/1372/772/image.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-4 bg-dark">
+                <img src="https://media.timeout.com/images/105476870/1372/772/image.jpg" class="img-fluid rounded">
+            </div>
+        </div>
+         <div class="row align-items-center">
+            <div class="col-4 bg-dark">
+                <img src="https://www.spanishbowl.com/wp-content/uploads/2018/12/1054692950.jpg.0.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-4 bg-dark">
+                 <img src="https://media.giphy.com/media/sRHVFZVZlHsOBwYTFn/giphy.gif" class="img-fluid rounded">
+            </div>
+            <div class="col-4 bg-dark">
+                <img src="https://www.mundodeportivo.com/r/GODO/MD/p7/Baloncesto/Imagenes/2020/04/14/Recortada/img_galvarez_20200414-092624_imagenes_md_otras_fuentes_ultimo-baile-mj-kfgE-U48493521631ClB-980x554@MundoDeportivo-Web.png" class="img-fluid rounded">
+            </div>
+        </div>
+         <div class="row align-items-center">
+            <div class="col-4 bg-dark">
+                <img src="https://images.pexels.com/photos/258695/pexels-photo-258695.jpeg?cs=srgb&dl=pexels-olga-varennikava-258695.jpg&fm=jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-4 bg-dark">
+                 <img src="https://images.pexels.com/photos/913380/pexels-photo-913380.jpeg?cs=srgb&dl=pexels-lee-shin-913380.jpg&fm=jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-4 bg-dark">
+                <img src="https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?cs=srgb&dl=pexels-min-an-941195.jpg&fm=jpg" class="img-fluid rounded">
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-4 bg-dark">
+                <img src="dolo.png" class="img-fluid rounded">
+            </div>
+            <div class="col-4 bg-dark">
+                 <img src="sici.jpg" class="img-fluid rounded">
+            </div>
+            <div class="col-4 bg-dark">
+                <img src="riomag.png" class="img-fluid rounded">
+            </div>
+        </div>
+    </DIV>
+
+
+  </body>
+</html>
